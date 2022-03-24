@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot verification Coins list renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "paddingTop": 40,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+      }
+    }
+  >
+    Coins List
+  </Text>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#CED0CE",
+        "height": 1,
+        "marginVertical": 30,
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;
