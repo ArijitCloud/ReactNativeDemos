@@ -16,7 +16,7 @@ This is a react native demo app that displays list of coins and their details us
 
 | Version | Date           | Comments        |
 | ------- | -------------- | --------------- |
-| 1.0.0   | March 25, 2022 | Initial release |
+| 1.0.0   | March 24, 2022 | Initial release |
 
 ## Minimal Path to Awesome
 
