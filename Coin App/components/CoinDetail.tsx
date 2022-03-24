@@ -27,7 +27,7 @@ export const CoinDetail = ({ coin }: { coin: CoinItem }) => {
             </Text>
             <Text style={styles.subSectionContainer}>
                 <Text style={styles.subSectionTitle}>Hashing Algorithm: </Text>
-                <Text style={styles.subSectionValue}>{coin.HashingAlgorithm}</Text>
+                <Text style={styles.subSectionValue}>{coin.HashingAlgorithm ?? 'No hashing algorithm value found for this coin!'}</Text>
             </Text>
             <Text style={styles.subSectionContainer}>
                 <Text style={styles.subSectionTitle}>Description: </Text>
@@ -50,7 +50,7 @@ export const CoinDetail = ({ coin }: { coin: CoinItem }) => {
             </Text>
             <Text style={styles.subSectionContainer}>
                 <Text style={styles.subSectionTitle}>Genesis Date: </Text>
-                <Text style={styles.subSectionValue}>{coin.GenesisDate}</Text>
+                <Text style={styles.subSectionValue}>{coin.GenesisDate ?? 'No genesis date found for this coin!'}</Text>
             </Text>
         </View >
     );
@@ -78,10 +78,10 @@ const styles = StyleSheet.create({
 
     },
     subSectionTitle: {
-        fontSize: 13,
+        fontSize: 15,
         fontWeight: '600',
     },
     subSectionValue: {
-        fontSize: 15
+        fontSize: 14
     }
 });

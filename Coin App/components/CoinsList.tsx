@@ -40,7 +40,7 @@ export const CoinsList = () => {
         //Query api
         const queryString = `?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`;
         getCoinDetailsAsync(id, queryString).then(d => {
-             //Format the raw data and set the state
+            //Format the raw data and set the state
             const formattedData = formatCoinDetail(d);
             setCoinData(formattedData);
             //Set hide loading progress spinner
@@ -65,7 +65,7 @@ export const CoinsList = () => {
                         <View key={'viewcontainer' + index}>
                             <Pressable onPress={() => onRowClick(coin.Id)} key={'pressable' + index}>
                                 <DataTable.Row key={'row' + index}>
-                                    <DataTable.Cell>
+                                    <DataTable.Cell style={styles.cellStyle}>
                                         <Image style={styles.image} source={{ uri: coin.Image }} />
                                         {coin.Name}
                                     </DataTable.Cell>
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
         height: 20,
         width: 20,
         marginRight: 4,
-        flex: 1
+        flex: 1,
     },
     centeredView: {
         flex: 1,
@@ -140,6 +140,9 @@ const styles = StyleSheet.create({
         marginTop: 22,
         marginLeft: '10%',
         maxWidth: '80%'
+    },
+    cellStyle: {
+        marginRight: 4
     },
     buttonContainer: {
         alignItems: "center",
