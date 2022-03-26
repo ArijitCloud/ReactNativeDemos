@@ -1,3 +1,4 @@
+import axios from "axios";
 import CoinGeckoApi from "../constants/CoinGeckoApi";
 
 /**
@@ -11,11 +12,8 @@ export const getCoinMarketsAsync = async (query: string) => {
 
     const { apiBase, marketsEndpoint } = CoinGeckoApi;
     try {
-        const response = await fetch(
-            `${apiBase}${marketsEndpoint}${query}`
-        );
-        const json = await response.json();
-        return json;
+        const json = await axios.get(`${apiBase}${marketsEndpoint}${query}`);
+        return json.data;
     } catch (error) {
         console.error(error);
     }
@@ -29,11 +27,8 @@ export const getCoinDetailsAsync = async (id: string, query: string) => {
     const { apiBase, coinEndpoint } = CoinGeckoApi;
     const coinApi = coinEndpoint.replace("{id}", id);
     try {
-        const response = await fetch(
-            `${apiBase}${coinApi}${query}`
-        );
-        const json = await response.json();
-        return json;
+        const json = await axios.get(`${apiBase}${coinApi}${query}`);
+        return json.data;
     } catch (error) {
         console.error(error);
     }
